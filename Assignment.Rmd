@@ -1,0 +1,150 @@
+---
+title: "Assignments"
+author: "Lea Lai"
+output:
+  html_document: 
+      collapsed: false
+      smooth_scroll: false
+      number_sections: true
+      theme: united
+      highlight: tango
+  pdf_document: 
+    toc: true
+    number_sections: true
+---
+
+# Assignment 1
+
+## Excercise 1
+
+###  Use seq() to create a list looks like this:
+```{r,echo=FALSE}
+seq(1,7,2)
+```
+###  use rep() and req() to create a list like this:
+```{r, echo=FALSE}
+d = rep(seq(1,7,2),rep(4,4))
+d
+```
+
+### then combind the above with [1,999] to get this:
+
+```{r, echo = FALSE}
+d1= c(1,900,d)
+d1
+```
+
+### make the above list as a column of a dataframe, with another column, as follwoing:
+
+(hint: use length() to help to create the second column)
+```{r,echo=FALSE}
+df=data.frame("Col1" = d1,"Col2"=rep(1,length(d1)))
+df
+```
+
+### change the name of the column for the data frame to "monkey1" and "monkey2"
+
+(you can use paste() to help you, though not necessary)
+
+```{r,echo=FALSE}
+colnames(df) = paste("monkey",1:2,sep="")
+df
+```
+
+### change the number 900 in the data frame to 4 like this:
+
+```{r,echo=FALSE}
+df$monkey1[2]=4
+df
+```
+
+### calculate the mean, standard deviation of the column monkey
+
+```{r,results="hide",echo=FALSE}
+mean(df$monkey1)
+```
+### Create a plot like this:
+```{r,echo=FALSE}
+plot(df$monkey1,df$monkey2)
+```
+
+
+# Excercise 2 Play with dataframe
+
+R has many existed dataset that we can playwith. print the head of the dataset iris:
+```{r,results='hide'}
+head(iris)
+```
+
+## a. What's the size(how many rows) of the dataset? How many levels are in species?
+
+The following command would give you the number of columns in iris dataset, but how do you get the number of rows of iris? For finding levels, the command "levels()" may be helpful.
+```{r}
+length(iris)
+```
+
+
+```{r,echo=FALSE}
+length(iris$Sepal.Length)
+levels(iris$Species)
+```
+
+
+
+
+# Excercise 3
+
+install the following packages by runing the command:\
+install.packages("dplyr")\
+If it shows error that it needs to download other packages, simply:\
+install.packages("xxx")\
+where xxx stand for other packages's name
+
+Load package:
+```{r,results="hide"}
+library(dplyr)
+```
+
+try the following:
+```{r,results="hide"}
+x = 1:10
+x %>% mean()
+```
+
+the above command has the same meaning as the command mean(x)
+
+
+## explore the usage of mutate(),  
+
+# Excerise 4
+
+Prerequisit:
+
+Install the package Rmisc as you did previously (remmeber to add quotation marks "Rmisc")
+
+
+
+## Load data and function
+
+load data by d = read.csv("Alldata2.csv")
+
+load functions .r file I sent out "functions_fromr.r". Put the R file in the same dictionary your current file is at, you can use the command source("functions_fromr.r")
+
+
+If you find some trouble to do that, you can just copy the function and check with me.
+
+## Try the follwing command
+
+p.meanRT(d,"my title"), the first argument is your data, the second agument is the title, see if you get the plot I sent to you.
+
+## try to understand the usage of mutate(), and filter(), by reading my codes
+
+
+
+
+
+
+
+
+
+
