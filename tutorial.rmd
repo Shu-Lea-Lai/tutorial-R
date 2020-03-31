@@ -1,17 +1,21 @@
 ---
-title: "Get start with R"
-author: "Lea Lai"
-date: "February 23, 2019"
 output:
   pdf_document: 
     toc: true
     number_sections: true
+    keep_tex:  true
   html_document: 
       collapsed: false
       smooth_scroll: false
       number_sections: true
       theme: united
       highlight: tango
+  output:
+    md_document:
+      variant: markdown_github
+author: "Lea Lai"
+date: "February 23, 2019"
+title: "Get start with R"
 ---
 
 
