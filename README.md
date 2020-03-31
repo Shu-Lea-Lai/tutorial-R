@@ -1,24 +1,6 @@
----
-output:
-  html_document: 
-      collapsed: false
-      smooth_scroll: false
-      number_sections: true
-      theme: united
-      highlight: tango
-      keep_md: true
-  pdf_document: 
-    toc: true
-    number_sections: true
-    keep_tex:  true
-  output:
-    md_document:
-      variant: markdown_github
-author: "Lea Lai"
-date: "February 23, 2019"
-title: "Get start with R"
----
-
+# Before Started
+This is an introduction to R, specifically for people who have a little knowledge in programming and unfamiliar with R. This tutorial is application oriented, and it's focused on aspects for psychologists to perform data analysis and plotting in R.
+The following is the tutorial. The assignments are also included in the assignment page. check https://rpubs.com/naszhu/start1 and https://rpubs.com/naszhu/assignment for complied rmd files.
 
 # A start: Get use to R 
 (Partially credit to Nicole Kelbick, PhD. and introduction to R https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf)
